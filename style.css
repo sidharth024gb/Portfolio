@@ -1,0 +1,120 @@
+:root {
+  --primary-color: #021526;
+  --secondary-color: #03346e;
+  --accent-1: #ec8305;
+  --accent-2: #6eacda;
+  --font-family-1: "Roboto Serif", serif;
+  --font-family-2: "Mona Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-2);
+}
+
+.font-family-1 {
+  font-family: var(--font-family-1);
+}
+
+@keyframes openning {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navbar Section */
+header {
+  background-color: var(--primary-color);
+  color: white;
+}
+header nav {
+  animation: openning 3s ease-in-out;
+}
+.navbar-brand {
+  font-family: var(--font-family-1);
+}
+.nav-link {
+  color: inherit;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  background-color: var(--accent-1);
+  color: white;
+}
+.navbar-toggler {
+  background-color: var(--accent-2);
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+#hero h1 {
+  letter-spacing: 2px;
+}
+#hero > div {
+  animation: openning 1s ease-in-out;
+}
+
+/* About Section */
+.hero-img {
+  border-top: 5px solid;
+  border-right: 5px solid;
+  position: relative;
+  border-color: var(--accent-1);
+  border-radius: 20px;
+  width: fit-content;
+}
+.hero-img > div {
+  border-bottom: 5px solid;
+  border-left: 5px solid;
+  border-color: var(--accent-2);
+  border-radius: 20px;
+}
+
+/* Skills Section */
+.skill-box {
+  position: relative;
+}
+.skill-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-wrap: nowrap;
+}
+#skills .skill-box:hover path {
+  display: none;
+}
+#skills .skill-box:hover .skill-name {
+  display: block;
+}
+
+/* Projects Section */
+#projects .card {
+  min-width: 200px;
+}
+#projects .card:hover {
+  box-shadow: 0px 0px 15px var(--accent-2);
+}
+
+/* Contact Me */
+#contactme {
+  height: 90vh;
+}
+#contactme h1 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
